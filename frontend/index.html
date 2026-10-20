@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Estudiantes</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Sistema de Gestión de Estudiantes</h1>
+        <p>Universidad Libre - Pereira</p>
+    </header>
+
+    <main>
+        <section id="autenticacion">
+            <h2>Iniciar sesión</h2>
+
+            <form id="loginForm">
+                <input id="username" type="text"
+                       placeholder="Usuario" required>
+
+                <input id="password" type="password"
+                       placeholder="Contraseña" required>
+
+                <button type="submit">Ingresar</button>
+            </form>
+
+            <h3>Registrar usuario</h3>
+            <form id="registroForm">
+                <input id="regUsername" type="text"
+                       placeholder="Usuario" required>
+                <input id="regEmail" type="email"
+                       placeholder="Correo" required>
+                <input id="regPassword" type="password"
+                       placeholder="Contraseña" minlength="6"
+                       required>
+                <button type="submit">Registrarse</button>
+            </form>
+        </section>
+
+        <section id="dashboard" hidden>
+            <h2>Panel de administración</h2>
+            <p id="bienvenida"></p>
+            <button id="logoutBtn">Cerrar sesión</button>
+
+            <h3>Estadísticas</h3>
+            <div id="estadisticas"></div>
+
+            <h3>Registrar estudiante</h3>
+            <form id="estudianteForm">
+                <input type="hidden" id="estudianteId">
+
+                <input id="nombre" placeholder="Nombre"
+                       required>
+                <input id="apellido" placeholder="Apellido"
+                       required>
+                <input id="edad" type="number"
+                       min="15" max="100" required>
+                <input id="carrera" placeholder="Carrera"
+                       required>
+                <input id="email" type="email"
+                       placeholder="Correo" required>
+                <input id="telefono"
+                       placeholder="Teléfono">
+
+                <button type="submit">Guardar estudiante</button>
+                <button id="cancelarBtn" type="button">
+                    Cancelar edición
+                </button>
+            </form>
+
+            <h3>Lista de estudiantes</h3>
+            <input id="busqueda"
+                   placeholder="Buscar estudiante...">
+
+            <select id="orden">
+                <option value="id">ID</option>
+                <option value="nombre">Nombre</option>
+                <option value="apellido">Apellido</option>
+                <option value="edad">Edad</option>
+            </select>
+
+            <select id="direccion">
+                <option value="asc">Ascendente</option>
+                <option value="desc">Descendente</option>
+            </select>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                        <th>Carrera</th>
+                        <th>Email</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaEstudiantes"></tbody>
+            </table>
+
+            <div id="paginacion"></div>
+        </section>
+    </main>
+
+    <div id="toast" role="status"></div>
+
+</body>
+</html>
