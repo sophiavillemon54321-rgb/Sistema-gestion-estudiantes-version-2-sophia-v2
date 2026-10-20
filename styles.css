@@ -1,0 +1,192 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+header {
+    background: linear-gradient(135deg, #102a43, #2563eb);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+main {
+    max-width: 1150px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: white;
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+#autenticacion {
+    max-width: 480px;
+    margin: 30px auto;
+}
+
+h2, h3 {
+    color: #173b65;
+}
+
+form {
+    display: grid;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    width: 100%;
+    background: white;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button:disabled {
+    opacity: 0.5;
+}
+
+#logoutBtn, .btn-eliminar {
+    background: #dc2626;
+}
+
+#cancelarBtn {
+    background: #64748b;
+}
+
+#estadisticas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.stat-card {
+    background: #eff6ff;
+    border-left: 4px solid #2563eb;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 160px;
+}
+
+.stat-card strong {
+    display: block;
+    font-size: 25px;
+    color: #1d4ed8;
+    margin-top: 8px;
+}
+
+#busqueda {
+    margin-bottom: 15px;
+}
+
+#orden, #direccion {
+    max-width: 200px;
+    margin: 0 10px 15px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background: #173b65;
+    color: white;
+    text-align: left;
+    padding: 13px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+tr:hover td {
+    background: #f8fafc;
+}
+
+td button {
+    margin: 3px;
+    padding: 8px 12px;
+}
+
+#paginacion {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #173b65;
+    color: white;
+    padding: 15px 22px;
+    border-radius: 10px;
+    display: none;
+    max-width: 350px;
+    z-index: 100;
+}
+
+#toast.error {
+    background: #dc2626;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 15px;
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 750px;
+    }
+}
+  
